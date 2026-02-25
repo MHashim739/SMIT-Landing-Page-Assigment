@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk" , sans-serif;
+}
+
+/* nav bar style */
+.nav-bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px 20px;
+}
+.nav-left{
+    margin: 30px 50px;
+    padding: 5px 5px;
+}
+.nav-left>h4>img{
+    height: 20px;
+    margin: 0px 25px;
+}
+.nav-left>h4{
+    height: 36px;
+    font-size: 33px;
+    font-weight: 600;
+    color: #000;
+}
+.nav-right{
+    margin: 30px;
+    margin-left: 150px;
+    padding: 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: end;
+    gap: 20px;
+}
+.nav-right>a{
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+    line-height: 28px;
+    font-style: Regular;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px 16px;
+}
+.right-button{
+    margin: 30px 20px;
+}
+.right-button>button{
+    padding: 14px 20px;
+    background-color: white;
+    color: #000;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 28px;
+    margin: 10px 70px;
+    
+}
+/* nav-bar-animate */
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+/* nav-bar-animate-close */
