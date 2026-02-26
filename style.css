@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 60px;
+    margin: 0px 50px;
     position: relative;
     margin-top: 40px;
 }
@@ -48,9 +49,9 @@
 
 /* BUTTON */
 .right-button button{
-    padding: 10px 18px;
+    padding: 16px 18px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 2px solid black;
     background: white;
     cursor: pointer;
 }
@@ -71,13 +72,10 @@
 .animate__animated.animate__bounce {
   --animate-duration: 2s;
 }
+
+
 /* banner section style */
 /* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Banner Main Container */
 .banner{
@@ -95,13 +93,21 @@
 }
 
 .ban-left h2{
-    font-size: 42px;
+    font-size: 60px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    line-height: 100%;
     margin-bottom: 20px;
     line-height: 1.2;
+    margin: 10px 1px;
 }
 
 .ban-left p{
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    font-style: medium;
     margin-bottom: 25px;
     line-height: 1.6;
     color: #555;
@@ -115,6 +121,11 @@
     text-decoration: none;
     border-radius: 6px;
     transition: 0.3s ease;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    font-style: medium;
 }
 
 .ban-left a:hover{
@@ -132,39 +143,7 @@
     max-width: 500px;
 }
 
-/* ========================= */
-/* Responsive Design */
-/* ========================= */
-
-@media only screen and (max-width: 992px){
-    .ban-left h2{
-        font-size: 32px;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .banner{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .ban-right{
-        text-align: center;
-    }
-
-    .ban-left h2{
-        font-size: 28px;
-    }
-
-    .ban-left p{
-        font-size: 15px;
-    }
-
-    .ban-right img{
-        max-width: 350px;
-        margin-top: 20px;
-    }
-}
+/* card section style */
 
 
 
@@ -175,7 +154,11 @@
 
 
 
-/* This changes all the animations globally */
+
+
+
+/* navbar responsive */
+
 :root {
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
@@ -221,5 +204,46 @@
 @media (max-width: 576px){
     .nav-bar-container{
         padding: 15px 20px;
+    }
+}
+
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+/* ========================= */
+/* Responsive Design */
+/* ========================= */
+
+@media only screen and (max-width: 992px){
+    .ban-left h2{
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .banner{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ban-right{
+        text-align: center;
+    }
+
+    .ban-left h2{
+        font-size: 28px;
+    }
+
+    .ban-left p{
+        font-size: 15px;
+    }
+
+    .ban-right img{
+        max-width: 350px;
+        margin-top: 20px;
     }
 }
