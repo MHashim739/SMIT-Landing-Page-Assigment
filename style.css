@@ -404,7 +404,7 @@ html, body{
   margin-left: 34px;
   line-height: 28px;
   position: absolute;
-  top: 49%;
+  top: 54%;
   text-decoration: none;
 }
 
@@ -435,6 +435,7 @@ html, body{
     border-radius: 20px;
     background-color: #f3f3f3;
     gap: 50px;
+    margin: 6% 8%;
     box-sizing: border-box;
 }
 
@@ -545,30 +546,11 @@ html, body{
     animation-delay: 0.5s; /* delay after heading */
 }
 
-/* card section 2 style */
+/* card section 2 style *
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   GLOBAL FIX (REMOVE RIGHT SIDE GAP ISSUE)
-========================================= */
 
 
 
@@ -830,82 +812,105 @@ html, body{
 }
 
 /* card section responsive */
+/* ============================= */
+/* ✅ RESPONSIVE MEDIA QUERIES  */
+/* ============================= */
 
-/* Tablet */
-@media (max-width: 992px){
-    .card-sec{
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Large Screens / Desktop (1400px+) */
+@media (min-width: 1400px) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 48%;
+  }
 }
 
-/* Mobile */
-@media (max-width: 600px){
-    .card-sec{
-        grid-template-columns: 1fr;
-    }
-}
-/* card section responsive */
-
-/* Large tablets / small laptops */
+/* Laptops & Small Desktops */
 @media (max-width: 1200px) {
-  .card1, .card2, .card3, .card4, .card5, .card6 {
-    width: 48%; /* 2 cards per row */
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 48%;
+    height: auto;
+    min-height: 280px;
   }
-}
 
-/* Tablets and large phones */
-@media (max-width: 900px) {
-  .card1, .card2, .card3, .card4, .card5, .card6 {
-    width: 100%; /* single card per row */
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .card1>img, .card2>img, .card3>img, .card4>img, .card5>img, .card6>img {
-    position: relative;
-    overflow-y: hidden;
-    margin-left: auto;
-    margin-right: auto;
+  .card1 > img, .card2 > img, .card3 > img,
+  .card4 > img, .card5 > img, .card6 > img {
+    position: static;
     display: block;
-    top: auto;
-    right: auto;
+    margin: 20px auto 0;
+    max-width: 60%;
   }
-}
-/* Small phones like iPhone SE */
-@media (max-width: 400px) {
-  .head>h4 {
-    font-size: 1.8rem;
-  }
-  .btn>a {
-    font-size: 0.9rem;
-    margin-left: 10px;
-  }
-  .card1, .card2, .card3, .card4, .card5, .card6 {
-    overflow-y: hidden;
-    padding: 20px;
-    height: auto; /* allow cards to expand based on content */
+
+  .btn > a {
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
   }
 }
 
-/* Extra large screens (desktop, Surface Pro, Zenbook Fold) */
-@media (min-width: 1600px) {
-  .card1-container, .card2-container, .card3-container {
-    margin-left: 10%;
-    margin-right: 10%;
+/* Tablets (iPad Mini, Air, Pro, Surface Pro) */
+@media (max-width: 992px) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+    height: auto;
+  }
+
+  .head > h4 {
+    font-size: 2rem;
   }
 }
-/* * Nest Hub / very small tablets */ 
-@media (max-width: 350px) {
-  .card1, .card2, .card3, .card4, .card5, .card6 {
-    padding: 15px;
+
+/* Large Mobiles (iPhone XR, 12 Pro Max, Pixel 7, S20 Ultra) */
+@media (max-width: 768px) {
+  .card1-container, 
+  .card2-container, 
+  .card3-container {
+    flex-direction: column;
+    align-items: center;
   }
-  .head>h4 {
-    font-size: 1.5rem;
+
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .head > h4 {
+    font-size: 1.7rem;
   }
 }
+
+/* Small Mobiles (iPhone SE, Galaxy A51/71 etc.) */
+@media (max-width: 480px) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+    padding: 18px;
+    border-radius: 25px;
+  }
+
+  .head > h4 {
+    font-size: 1.4rem;
+  }
+
+  .btn > img {
+    width: 22px;
+  }
+}
+
+/* Fold Devices (Z Fold, Surface Duo, Zenbook Fold) */
+@media (max-width: 600px) and (orientation: landscape) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+  }
+}
+
+
 
 
 /* banner 2 section responsive */
-/* Responsive Media Queries */
 
 /* Tablets */
 /* Small phones like iPhone SE (320px) */
@@ -983,5 +988,13 @@ html, body{
     .head1-para {
         flex-direction: row;
         display: inline-block; /* Side by side if enough space */
+    }
+}
+@media (max-width: 768px){
+    .head1-para{
+        display: inline-block;
+        flex-direction: column;
+        padding: 0px 0px;
+        /* overflow: hidden; */
     }
 }
