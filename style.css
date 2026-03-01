@@ -519,7 +519,6 @@ html, body{
 .head1-para > h5 {
     background-color: #89ff66;
     color: #000;
-    display: inline;
     display: inline-block;
     font-size: clamp(24px, 5vw, 40px); /* Responsive font-size */
     font-weight: 500;
@@ -863,6 +862,7 @@ html, body{
   }
   .card1>img, .card2>img, .card3>img, .card4>img, .card5>img, .card6>img {
     position: relative;
+    overflow-y: hidden;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -880,6 +880,7 @@ html, body{
     margin-left: 10px;
   }
   .card1, .card2, .card3, .card4, .card5, .card6 {
+    overflow-y: hidden;
     padding: 20px;
     height: auto; /* allow cards to expand based on content */
   }
@@ -926,9 +927,16 @@ html, body{
         margin: 10px 0;
         text-align: center;
     }
-    .left > h3 { font-size: 26px; }
-    .left > p { font-size: 17px; }
-    .left > a { font-size: 17px; padding: 11px 18px; }
+    .left > h3 {
+         font-size: 26px;
+         }
+    .left > p {
+         font-size: 17px; 
+        }
+    .left > a { 
+        font-size: 17px;
+         padding: 11px 18px;
+         }
 }
 /* Larger phones like iPhone 14 Pro Max, Pixel 7 (450px - 500px) */
 @media (max-width: 500px) {
@@ -936,8 +944,12 @@ html, body{
         flex: 1 1 100%;
         text-align: center;
     }
-    .left > h3 { font-size: 28px; }
-    .left > p { font-size: 17px; }
+    .left > h3 { 
+        font-size: 28px;
+     }
+    .left > p {
+         font-size: 17px;
+         }
 }
 
 /* Tablets like iPad Mini / Air / Pro (768px - 1024px) */
@@ -969,6 +981,7 @@ html, body{
 /* Responsive layout for medium and large screens */
 @media screen and (min-width: 768px) {
     .head1-para {
-        flex-direction: row; /* Side by side if enough space */
+        flex-direction: row;
+        display: inline-block; /* Side by side if enough space */
     }
 }
