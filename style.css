@@ -404,8 +404,7 @@ html, body{
   margin-left: 34px;
   line-height: 28px;
   position: absolute;
-  top: 51%;
-  right: 75%;
+  top: 49%;
   text-decoration: none;
 }
 
@@ -879,9 +878,6 @@ html, body{
   .btn>a {
     font-size: 0.9rem;
     margin-left: 10px;
-    position: absolute;
-    top: 51%;
-    right: 75%;
   }
   .card1, .card2, .card3, .card4, .card5, .card6 {
     padding: 20px;
