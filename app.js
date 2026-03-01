@@ -1,16 +1,8 @@
-document.addEventListener("DOMContentLoaded", function(){
-
+<script>
     const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav-links");
+    const navLinks = document.getElementById("nav-links");
 
-    toggle.addEventListener("click", function(){
-        nav.classList.toggle("active");
+    toggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
     });
-
-});
-
-
-document.documentElement.style.setProperty('--animate-duration', '2s');
-
-// All animations will take half the time to accomplish
-document.documentElement.style.setProperty('--animate-duration', '.5s');
+</script>
