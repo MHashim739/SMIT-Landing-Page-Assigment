@@ -861,6 +861,40 @@
         font-size: 20px;
     }
 }
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 992px){
+
+    .nav-bar-container{
+        padding: 15px 5%;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .nav-right{
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: white;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .nav-right.active{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .right-button{
+        display: none;
+    }
+}
 
 
 /* This changes all the animations globally */
