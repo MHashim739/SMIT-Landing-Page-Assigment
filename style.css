@@ -338,245 +338,91 @@ html, body{
 
 
 /* card section style */
-
-.card1-container{
-    margin-top: 40px;
-    margin: 0px 110px;
+/* Container Flex */
+.card1-container, .card2-container, .card3-container {
+  margin-top: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* wrap cards on smaller screens */
+  gap: 20px;
 }
 
-.card1{
-  width: 620px;
+/* Cards */
+.card1, .card2, .card3, .card4, .card5, .card6 {
+  width: 48%; /* 2 cards per row on large screens */
+  max-width: 620px;
+  min-width: 280px;
   height: 300px;
   border: 2px solid black;
   padding: 30px;
   border-radius: 45px;
   margin-top: 20px;
   position: relative;
-}
-.card1>img{
-    margin-left: 350px;
-    position: absolute;
-    top: 20%;
-}
-.head{
-  display: inline;
-  display: inline-block;
-}
-.head>h4{
-    background-color: #89ff66;
-    color: #000;
-    display: inline-block;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0px;
-}
-.btn{
-    margin-top: 40px;
-}
-.btn>img{
-    position: absolute;
-    bottom: 40%;
-    overflow: hidden;
-    margin-top: 20px;
-    width: 30px;
-    height: auto;
-     color: #000;
-    display: inline-block;
-    display: inline;
-}
-.btn>a{
-    color: #000;
-    display: inline-block;
-    display: inline;
-    font-size: 20px;
-    font-weight: 400;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 34px;
-    line-height: 28px;
-    letter-spacing: 0px;
-    text-decoration: none;
-}
-
-/* Image right side */
-.img1{
-  max-width: 180px;
-  height: auto;
-}
-/* card2 */
-.card2{
-  width: 620px;
-  height: 300px;
-  border: 2px solid black;
-  padding: 30px;
-  border-radius: 45px;
-  margin-top: 20px;
-  position: relative;
-}
-.card2>img{
-    margin-left: 350px;
-    position: absolute;
-    top: 20%;
-}
-/* card3 */
-.card2-container{
-    margin-top: 40px;
-    margin: 0px 110px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card3{
-  width: 620px;
-  height: 300px;
-  border: 2px solid black;
-  padding: 30px;
-  border-radius: 45px;
-  margin-top: 20px;
-  position: relative;
-}
-.card3>img{
-    margin-left: 350px;
-    position: absolute;
-    top: 20%;
-}
-
-/* card4 */
-
-.card4{
-  width: 620px;
-  height: 300px;
-  border: 2px solid black;
-  padding: 30px;
-  border-radius: 45px;
-  margin-top: 20px;
-  position: relative;
-}
-.card4>img{
-    margin-left: 350px;
-    position: absolute;
-    top: 20%;
-}
-/* card5 */
-.card3-container{
-    margin-top: 40px;
-    margin: 0px 110px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.card5{
-  width: 620px;
-  height: 300px;
-  border: 2px solid black;
-  padding: 30px;
-  border-radius: 45px;
-  margin-top: 20px;
-  position: relative;
-}
-.card5>img{
-    margin-left: 350px;
-    position: absolute;
-    top: 20%;
-}
-/* card6 */
-.card6{
-  width: 620px;
-  height: 300px;
-  border: 2px solid black;
-  padding: 30px;
-  border-radius: 45px;
-  margin-top: 20px;
-  position: relative;
-}
-.card6>img{
-    margin-left: 350px;
-    position: absolute;
-    top: 20%;
-}
-/* card section animation */
-/* Smooth transition for all cards */
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6{
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   transition: all 0.4s ease;
-}
-
-/* Hover Effect */
-.card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover,
-.card5:hover,
-.card6:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-/* Image smooth transition */
-.card1>img,
-.card2>img,
-.card3>img,
-.card4>img,
-.card5>img,
-.card6>img{
-  transition: transform 0.4s ease;
-}
-
-/* Image zoom effect */
-.card1:hover>img,
-.card2:hover>img,
-.card3:hover>img,
-.card4:hover>img,
-.card5:hover>img,
-.card6:hover>img{
-  transform: scale(1.1);
-}
-/* Animation Keyframes */
-@keyframes fadeUp {
-  from{
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply animation */
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6{
   animation: fadeUp 0.8s ease forwards;
 }
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6{
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-.card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover,
-.card5:hover,
-.card6:hover{
+
+/* Hover effect */
+.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 45px rgba(0,0,0,0.18);
 }
+
+/* Card Images */
+.card1>img, .card2>img, .card3>img, .card4>img, .card5>img, .card6>img {
+  max-width: 45%; /* image takes half of card width */
+  height: auto;
+  position: absolute;
+  top: 20%;
+  right: 5%; /* position image to right side */
+  transition: transform 0.4s ease;
+}
+
+.card1:hover>img, .card2:hover>img, .card3:hover>img, .card4:hover>img, .card5:hover>img, .card6:hover>img {
+  transform: scale(1.1);
+}
+
+/* Headings */
+.head>h4 {
+  background-color: #89ff66;
+  color: #000;
+  display: inline-block;
+  font-size: 2.5rem; /* responsive font */
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Buttons */
+.btn>a {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 34px;
+  line-height: 28px;
+  position: absolute;
+  top: 51%;
+  right: 75%;
+  text-decoration: none;
+}
+
+.btn>img {
+  width: 30px;
+  height: auto;
+  margin-top: 4%;
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 /* banner 2 section style */
 
 /* Banner container */
@@ -734,25 +580,59 @@ html, body{
    NAVBAR RESPONSIVE MEDIA QUERY SECTION
 ========================================= */
 
-/* Tablet */
+/* navbar responsive */
+
+/* ========================= */
+/* ====== LARGE TABLET ===== */
+/* ========================= */
+@media (max-width: 1200px){
+
+    .nav-bar-container{
+        margin: 0px 30px;
+        padding: 15px 30px;
+    }
+
+    .nav-right{
+        gap: 18px;
+    }
+
+    .nav-right a{
+        font-size: 16px;
+    }
+
+    .right-button button{
+        font-size: 18px;
+        padding: 14px 16px;
+    }
+}
+
+/* ========================= */
+/* ========= TABLET ======== */
+/* ========================= */
 @media (max-width: 992px){
 
     .nav-bar-container{
-        padding: 15px 30px;
-        margin: 0;
+        margin: 0px 20px;
+        padding: 15px 20px;
     }
 
     .nav-right{
         gap: 15px;
     }
 
+    .nav-right a{
+        font-size: 15px;
+    }
+
     .right-button button{
-        padding: 10px 14px;
         font-size: 16px;
+        padding: 12px 14px;
     }
 }
 
-/* Mobile Devices */
+/* ========================= */
+/* ========= MOBILE ======== */
+/* ========================= */
 @media (max-width: 768px){
 
     .menu-toggle{
@@ -761,31 +641,115 @@ html, body{
 
     .nav-right{
         position: absolute;
-        top: 70px;
+        top: 80px;
         right: 0;
-        background: white;
         width: 100%;
+        background: white;
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
         padding: 20px 0;
         display: none;
     }
 
-    .nav-right a{
-        padding: 10px 0;
+    .nav-right.active{
+        display: flex;
     }
 
-    .nav-bar-container{
-        padding: 15px 20px;
-        margin: 0;
+    .right-button{
+        margin-top: 10px;
     }
 }
 
-/* =========================================
-   BANNER RESPONSIVE MEDIA QUERY SECTION
-========================================= */
+/* ========================= */
+/* ===== SMALL MOBILE ====== */
+/* ========================= */
+@media (max-width: 480px){
 
+    .nav-left h4{
+        font-size: 20px;
+    }
+
+    .nav-left h4 img{
+        height: 20px;
+    }
+
+    .nav-right a{
+        font-size: 14px;
+    }
+
+    .right-button button{
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+@media (max-width: 768px){
+
+    .nav-right{
+        display: none;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .nav-left h4{
+        font-size: 20px;
+    }
+}
+/* 📱 MOBILE RESPONSIVE */
 @media (max-width: 992px){
 
+    .nav-bar-container{
+        padding: 15px 5%;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .nav-right{
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: white;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .nav-right.active{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .right-button{
+        display: none;
+    }
+}
+
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+/* ========================= */
+/* Responsive Design */
+/* ========================= */
+
+@media only screen and (max-width: 992px){
+    .ban-left h2{
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 768px){
     .banner{
         flex-direction: column;
         text-align: center;
@@ -796,142 +760,234 @@ html, body{
     }
 
     .ban-left h2{
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 576px){
-
-    .ban-left h2{
         font-size: 28px;
     }
 
     .ban-left p{
-        font-size: 16px;
+        font-size: 15px;
     }
 
-    .ban-left a{
-        font-size: 16px;
-        padding: 10px 18px;
+    .ban-right img{
+        max-width: 350px;
+        margin-top: 20px;
+    }
+}
+/* heading one & para 1 section 1 */
+
+/* Responsive layout for medium and large screens */
+@media screen and (min-width: 768px) {
+    .head-para {
+        flex-direction: row; /* Side by side if enough space */
     }
 }
 
-/* =========================================
-   REVIEWS SECTION RESPONSIVE
-========================================= */
+/* review section responsive */
 
-@media (max-width: 768px){
-
-    .reviews{
-        margin: 20px;
-        justify-content: center;
-    }
-
+/* Tablet (3 per row) */
+@media (max-width: 992px){
     .vector{
         width: 30%;
     }
 }
 
-/* =========================================
-   CARD SECTION RESPONSIVE FIX
-========================================= */
-
-/* IMPORTANT FIX */
-.card1-container,
-.card2-container,
-.card3-container{
-    margin: 40px auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Mobile (2 per row) */
+@media (max-width: 600px){
+    .vector{
+        width: 48%;
+    }
 }
-
-/* Remove fixed width */
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6{
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-/* Fix image position */
-.card1 > img,
-.card2 > img,
-.card3 > img,
-.card4 > img,
-.card5 > img,
-.card6 > img{
-    position: static;
-    margin: 20px 0 0 0;
-    display: block;
+/* Tablets */
+@media (max-width: 992px){
+    .reviews{
+        margin: 0 40px;
+        justify-content: center;
+    }
 }
 
 /* Mobile */
-@media (max-width: 768px){
-
-    .card1-container,
-    .card2-container,
-    .card3-container{
+@media (max-width: 590px){
+    .reviews{
         flex-direction: column;
-        align-items: center;
-    }
-
-    .card1,
-    .card2,
-    .card3,
-    .card4,
-    .card5,
-    .card6{
-        padding: 20px;
-        border-radius: 25px;
-    }
-
-    .head > h4{
-        font-size: 24px;
-    }
-
-    .btn > a{
-        font-size: 16px;
-    }
-}
-
-/* =========================================
-   BANNER 2 RESPONSIVE MEDIA QUERY SECTION
-========================================= */
-
-@media (max-width: 992px){
-
-    .ban{
-        flex-direction: column;
+        margin: 0 20px;
         text-align: center;
     }
+}
 
-    .left{
-        margin: 20px;
-    }
-
-    .right{
-        transform: none;
-        margin-top: 20px;
+/* Small Mobile */
+@media (max-width: 480px){
+    .reviews{
+        margin: 0 15px;
     }
 }
 
-@media (max-width: 576px){
+/* one heading and paragraph responsive */
 
-    .left > h3{
+@media (max-width: 768px){
+    .head-para{
+        display: inline-block;
+        flex-direction: column;
+        padding: 0px 0px;
+        overflow: hidden;
+    }
+}
+
+/* card section responsive */
+
+/* Tablet */
+@media (max-width: 992px){
+    .card-sec{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px){
+    .card-sec{
+        grid-template-columns: 1fr;
+    }
+}
+/* card section responsive */
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    width: 48%; /* 2 cards per row */
+  }
+}
+
+/* Tablets and large phones */
+@media (max-width: 900px) {
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    width: 100%; /* single card per row */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .card1>img, .card2>img, .card3>img, .card4>img, .card5>img, .card6>img {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    top: auto;
+    right: auto;
+  }
+}
+/* Small phones like iPhone SE */
+@media (max-width: 400px) {
+  .head>h4 {
+    font-size: 1.8rem;
+  }
+  .btn>a {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    padding: 20px;
+    height: auto; /* allow cards to expand based on content */
+  }
+}
+
+/* Extra large screens (desktop, Surface Pro, Zenbook Fold) */
+@media (min-width: 1600px) {
+  .card1-container, .card2-container, .card3-container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+/* * Nest Hub / very small tablets */ 
+@media (max-width: 350px) {
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    padding: 15px;
+  }
+  .head>h4 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* banner 2 section responsive */
+/* Responsive Media Queries */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .banner-2-section {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .left > h3 {
+        font-size: 26px;
+    }
+
+    .left > p {
+        font-size: 16px;
+    }
+
+    .left > a {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    .right {
+        transform: translateY(30px);
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .ban {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .left {
+        margin: 0;
+    }
+
+    .left > h3 {
         font-size: 22px;
     }
 
-    .left > p{
-        font-size: 15px;
+    .left > p {
+        font-size: 14px;
     }
 
-    .left > a{
+    .left > a {
         font-size: 16px;
-        padding: 10px 18px;
+        padding: 10px 16px;
+    }
+
+    .right {
+        transform: translateY(20px);
+    }
+
+    .right > img {
+        margin-bottom: 80px;
+        margin-left: 0;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+    .left > h3 {
+        font-size: 20px;
+    }
+
+    .left > p {
+        font-size: 13px;
+    }
+
+    .left > a {
+        font-size: 14px;
+        padding: 8px 8px;
+    }
+}
+/* heading1 & paragraph one section2 */
+
+/* Responsive layout for medium and large screens */
+@media screen and (min-width: 768px) {
+    .head1-para {
+        flex-direction: row; /* Side by side if enough space */
     }
 }
