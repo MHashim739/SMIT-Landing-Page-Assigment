@@ -546,7 +546,75 @@ html, body{
     animation-delay: 0.5s; /* delay after heading */
 }
 
-/* card section 2 style *
+
+/* card 2 section style */
+
+.card2-sec{
+    max-width: 1200px;
+    width: 100%;
+    max-height: 1000px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 5%  9%;
+    background-color: #191a23;
+}
+.box-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 8%;
+    gap: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.box-1{
+    border-right: 2px solid #89ff66;
+    color: #fff;
+    /* max-width: 1200px; */
+}
+.box-1>p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    font-style: Regular;
+}
+.box-1 > a{
+    color: #89ff66;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+.box-1 > a > i{
+    color: #89ff66;
+    font-size: 20px;
+}
+
+.box-2 >p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    font-style: Regular;
+}
+.box-2 > a{
+    color: #89ff66;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+.box-2 > a > i{
+    color: #89ff66;
+    font-size: 20px;
+}
 
 
 
@@ -812,7 +880,100 @@ html, body{
 }
 
 /* card section responsive */
+/* ============================= */
+/* ✅ RESPONSIVE MEDIA QUERIES  */
+/* ============================= */
 
+/* Large Screens / Desktop (1400px+) */
+@media (min-width: 1400px) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 48%;
+  }
+}
+
+/* Laptops & Small Desktops */
+@media (max-width: 1200px) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 48%;
+    height: auto;
+    min-height: 280px;
+  }
+
+  .card1 > img, .card2 > img, .card3 > img,
+  .card4 > img, .card5 > img, .card6 > img {
+    position: static;
+    display: block;
+    margin: 20px auto 0;
+    max-width: 60%;
+  }
+
+  .btn > a {
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+/* Tablets (iPad Mini, Air, Pro, Surface Pro) */
+@media (max-width: 992px) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+    height: auto;
+  }
+
+  .head > h4 {
+    font-size: 2rem;
+  }
+}
+
+/* Large Mobiles (iPhone XR, 12 Pro Max, Pixel 7, S20 Ultra) */
+@media (max-width: 768px) {
+  .card1-container, 
+  .card2-container, 
+  .card3-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .head > h4 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Small Mobiles (iPhone SE, Galaxy A51/71 etc.) */
+@media (max-width: 480px) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+    padding: 18px;
+    border-radius: 25px;
+  }
+
+  .head > h4 {
+    font-size: 1.4rem;
+  }
+
+  .btn > img {
+    width: 22px;
+  }
+}
+
+/* Fold Devices (Z Fold, Surface Duo, Zenbook Fold) */
+@media (max-width: 600px) and (orientation: landscape) {
+  .card1, .card2, .card3, 
+  .card4, .card5, .card6 {
+    width: 100%;
+  }
+}
 
 
 
@@ -904,4 +1065,104 @@ html, body{
         padding: 0px 0px;
         /* overflow: hidden; */
     }
+}
+/* card 2 section responsive */
+
+/* ============================= */
+/* Large Screens (Nest Hub Max, Desktop, 1200px+) */
+/* ============================= */
+@media (min-width: 1200px) {
+  .card2-sec {
+    margin: 5% auto;
+  }
+}
+
+/* ============================= */
+/* Laptops & Tablets Landscape */
+/* (iPad Pro, Surface Pro 7, Nest Hub) */
+/* ============================= */
+@media (max-width: 1024px) {
+  .card2-sec {
+    margin: 5% 5%;
+  }
+
+  .box-card {
+    gap: 20px;
+  }
+}
+
+/* ============================= */
+/* Tablets */
+/* (iPad Mini, iPad Air, Surface Duo, Galaxy Z Fold 5 Folded) */
+/* ============================= */
+@media (max-width: 900px) {
+
+  .box-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .box-1 {
+    border-right: none;
+    border-bottom: 2px solid #89ff66;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .box-2 {
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* Large Mobile */
+/* (iPhone 14 Pro Max, XR, Pixel 7, Galaxy S20 Ultra) */
+/* ============================= */
+@media (max-width: 600px) {
+
+  .card2-sec {
+    margin: 8% 5%;
+    padding: 20px 15px;
+  }
+
+  .box-card {
+    flex-direction: column;
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  .box-1,
+  .box-2 {
+    width: 100%;
+  }
+
+  .box-1 > p,
+  .box-2 > p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .box-1 > a,
+  .box-2 > a {
+    font-size: 18px;
+  }
+}
+
+/* ============================= */
+/* Small Mobile */
+/* (iPhone SE, Galaxy A51/A71) */
+/* ============================= */
+@media (max-width: 400px) {
+
+  .box-1 > p,
+  .box-2 > p {
+    font-size: 14px;
+  }
+
+  .box-1 > a,
+  .box-2 > a {
+    font-size: 16px;
+  }
+
 }
