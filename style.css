@@ -616,6 +616,37 @@ html, body{
     font-size: 20px;
 }
 
+/* one heading & paragraph secection 3 */
+.head2-para {
+    display: flex;
+    flex-direction: column; /* Stack by default for small screens */
+    gap: 15px;
+    margin: 50px 10%; /* Use percentage for responsive side margins */
+    flex-wrap: wrap;
+}
+
+/* Heading */
+.head2-para > h5 {
+    display: inline-block;
+} 
+.head2-para > h5 >span{
+    background-color: #89ff66;
+    color: #000;
+    display: inline-block;
+    font-size: clamp(24px, 5vw, 40px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+/* Paragraph */
+.head2-para > p {
+    color: #000;
+    font-size: clamp(14px, 2.5vw, 18px); /* Responsive font-size */
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    margin: 5px 0;
+}
+
 
 
 
@@ -1168,4 +1199,22 @@ html, body{
     font-size: 16px;
   }
 
+}
+
+/* heading1 & paragraph one section2 */
+
+/* Responsive layout for medium and large screens */
+@media screen and (min-width: 768px) {
+    .head1-para {
+        flex-direction: row;
+        display: inline-block; /* Side by side if enough space */
+    }
+}
+@media (max-width: 768px){
+    .head1-para{
+        display: inline-block;
+        flex-direction: column;
+        padding: 0px 0px;
+        /* overflow: hidden; */
+    }
 }
