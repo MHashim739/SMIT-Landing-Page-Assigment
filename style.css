@@ -647,6 +647,70 @@ html, body{
     margin: 5px 0;
 }
 
+/* card section 3 style */
+
+.process-section {
+  max-width: 1300px;
+  width: 90%;
+  margin: 80px auto;
+}
+
+.accordion {
+    background: #f3f3f3;
+  border: 2px solid #191919;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.accordion.active {
+  background: #b8ff63;
+}
+.accordion-content > hr{
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.number {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.accordion-header h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.icon {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.accordion-content {
+  padding: 0 25px 25px 25px;
+  display: none;
+}
+
+.accordion.active .accordion-content {
+  display: block;
+}
+
 
 
 
@@ -1217,4 +1281,105 @@ html, body{
         padding: 0px 0px;
         /* overflow: hidden; */
     }
+}
+
+/* card section 3 responsive */
+
+/* ========== Large Tablets (iPad Pro, Surface Pro 7, Nest Hub Max) ========== */
+@media (max-width: 1200px) {
+  .number {
+    font-size: 50px;
+  }
+
+  .accordion-header h3 {
+    font-size: 26px;
+  }
+}
+
+
+/* ========== Tablets (iPad Mini, iPad Air, Galaxy Fold, Zenbook Fold) ========== */
+@media (max-width: 992px) {
+  .process-section {
+    width: 92%;
+  }
+
+  .accordion-header {
+    padding: 20px;
+  }
+
+  .number {
+    font-size: 42px;
+  }
+
+  .accordion-header h3 {
+    font-size: 22px;
+  }
+  }
+
+
+/* ========== Large Mobiles (iPhone 14 Pro Max, XR, Pixel 7, S20 Ultra) ========== */
+@media (max-width: 768px) {
+  .accordion-header {
+    padding: 18px;
+  }
+
+  .left {
+    gap: 15px;
+  }
+
+  .number {
+    font-size: 34px;
+  }
+
+  .accordion-header h3 {
+    font-size: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+/* ========== Small Mobiles (iPhone SE, Galaxy A51/A71, small Android) ========== */
+@media (max-width: 480px) {
+  .process-section {
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  .accordion-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .left {
+    gap: 10px;
+  }
+
+  .number {
+    font-size: 26px;
+  }
+
+  .accordion-header h3 {
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+    .accordion-content {
+    padding: 0 18px 18px 18px;
+  }
+}
+
+
+/* ========== Very Small Devices (Old small phones) ========== */
+@media (max-width: 360px) {
+  .number {
+    font-size: 22px;
+  }
+
+  .accordion-header h3 {
+    font-size: 14px;
+  }
 }
