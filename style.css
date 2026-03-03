@@ -448,6 +448,7 @@ html, body{
 /* Left Side */
 .left2 {
     flex: 1;
+     animation: slideLeft 1s ease forwards;
 }
 
 .left2 h3 {
@@ -473,6 +474,7 @@ html, body{
 .right {
     flex: 1;
     text-align: center;
+    animation: slideRight 1s ease forwards;
 }
 
 .right img {
@@ -480,16 +482,34 @@ html, body{
     height: auto;
 }
 
-/* Animations */
-@keyframes slideInUp {
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes slideLeft {
     from {
-        transform: translateY(50px);
+        opacity: 0;
+        transform: translateX(-60px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
 /* one heading & paragraph sec2 */
 .head1-para {
     display: flex;
@@ -1058,72 +1078,106 @@ html, body{
 
 /* banner 2 section responsive */
 
-/* Tablets */
-/* Small phones like iPhone SE (320px) */
-@media (max-width: 360px) {
-    .left2, .right {
-        flex: 1 1 100%;
-        margin: 10px 0;
-        text-align: center;
-    }
-    .left2 > h3 { font-size: 24px; }
-    .left2 > p { font-size: 16px; }
-    .left2 > a { font-size: 16px; padding: 10px 16px; }
-}
+/* =========================
+   LARGE DESKTOP (1400px+)
+========================= */
 
-/* Phones like iPhone XR, iPhone 12 Pro, Galaxy S20 (375px - 414px) */
-@media (max-width: 430px) {
-    .left2, .right {
-        flex: 1 1 100%;
-        margin: 10px 0;
-        text-align: center;
-    }
-    .left2 > h3 {
-         font-size: 26px;
-         }
-    .left2 > p {
-         font-size: 17px; 
-        }
-    .left2 > a { 
-        font-size: 17px;
-         padding: 11px 18px;
-         }
-}
-/* Larger phones like iPhone 14 Pro Max, Pixel 7 (450px - 500px) */
-@media (max-width: 500px) {
-    .left2, .right {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-    .left2 > h3 { 
-        font-size: 28px;
-     }
-    .left2 > p {
-         font-size: 17px;
-         }
-}
-
-/* Tablets like iPad Mini / Air / Pro (768px - 1024px) */
-@media (max-width: 1024px) {
+@media (min-width: 1400px) {
     .ban {
+        max-width: 1400px;
+    }
+}
+
+/* =========================
+   LAPTOP (1200px)
+========================= */
+
+@media (max-width: 1200px) {
+    .ban {
+        padding: 50px 40px;
+        gap: 40px;
+    }
+}
+/* =========================
+   TABLETS (iPad, Surface)
+========================= */
+
+@media (max-width: 992px) {
+    .ban {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .left2,
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        max-width: 80%;
+    }
+}
+/* =========================
+   LARGE PHONES (XR, 12 Pro Max, S20 Ultra)
+========================= */
+
+@media (max-width: 768px) {
+    .ban {
+        padding: 40px 25px;
         gap: 30px;
     }
-    .left2, .right {
-        flex: 1 1 48%;
-        margin: 10px auto;
-    }
-}
-/* Small laptops / Surface Pro / Galaxy Fold 5 / Asus Zenbook Fold (1025px - 1440px) */
-@media (max-width: 1440px) {
-    .left2, .right {
-        flex: 1 1 48%;
+
+    .right img {
+        max-width: 90%;
     }
 }
 
-/* Large desktops (1441px and above) */
-@media (min-width: 1441px) {
-    .left2 { flex: 1 1 48%; }
-    .right { flex: 1 1 48%; }
+/* =========================
+   SMALL PHONES (iPhone SE, Galaxy A51)
+========================= */
+
+@media (max-width: 480px) {
+    .banner-2-section {
+        margin: 50px 0;
+    }
+
+    .ban {
+        padding: 30px 20px;
+        border-radius: 18px;
+    }
+    .left2 h3 {
+        font-size: 22px;
+    }
+
+    .left2 p {
+        font-size: 14px;
+    }
+
+    .left2 a {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+/* =========================
+   FOLD DEVICES (Z Fold / Surface Duo)
+========================= */
+
+@media (max-width: 600px) and (min-height: 700px) {
+    .ban {
+        padding: 35px 20px;
+    }
+}
+
+/* =========================
+   NEST HUB / WIDE SHORT SCREENS
+========================= */
+
+@media (max-height: 600px) {
+    .ban {
+        padding: 25px 20px;
+        gap: 20px;
+    }
 }
 
 
