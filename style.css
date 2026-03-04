@@ -882,87 +882,112 @@ html, body{
 }
 
 /* tetinimials slide section style */
-
-.testimonials {
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 27px;
-  background: #0f1117;
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
-}
-.card1{
-    margin-right: 20%;
+:root {
+  --bg-dark: #191a23;
+  --lime: #b9ff66;
+  --white: #ffffff;
 }
 
-.cards {
-  width: 1100px;
+.testimonial-viewport {
+  background-color: var(--bg-dark);
+  padding: 80px 0;
+  overflow: hidden; /* This crops the side cards */
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-row {
+  display: flex;
   gap: 40px;
-  overflow: hidden;
+  justify-content: center;
+  align-items: flex-start;
+  width: 140%; /* Wider than container to allow side cards to bleed out */
 }
 
-.card1 {
-  width: 40%;
-  height: 400px;
+.testimonial-card {
+  flex: 0 0 600px; /* Fixed width for the cards */
+  transition: opacity 0.3s ease;
+}
+
+/* The Speech Bubble */
+.bubble {
+  border: 1px solid var(--lime);
+  border-radius: 40px;
   padding: 40px;
-  border: 1.5px solid #39ff14;
-  border-radius: 24px;
-  color: white;
-  background: transparent;
-  opacity: 0.4;
-}
-.card2 {
-  width: 40%;
-  height: 400px;
-  padding: 40px;
-  clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 44% 100%, 34% 74%, 1% 100%, 0% 43%, 0 0);
-  border: 2px solid #39ff14;
-  /* border: 1.5px solid #39ff14; */
-  border-radius: 24px;
-  clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 44% 100%, 34% 74%, 1% 100%, 0% 43%, 0 0);
-  color: white;
-  background: transparent;
-  opacity: 0.4;
-  overflow: hidden;
-}
-
-.card3 {
-    
-  width: 40%;
-  height: 400px;
-  padding: 40px;
-  border: 1.5px solid #39ff14;
-  border-radius: 24px;
-  color: white;
-  /* background: transparent; */
-  /* opacity: 0.4; */
-}
-.card.active {
-  opacity: 1;
-}
-
-/* 🔥 Ye hai bottom special cut shape */
-
-
-.card p {
-  font-size: 15px;
-  line-height: 1.6;
+  color: var(--white);
+  position: relative;
   margin-bottom: 25px;
+  min-height: 180px;
 }
 
-.card h4 {
-  color: #39ff14;
-  margin: 0;
+/* The Triangle Tail */
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 60px;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-dark);
+  border-right: 1px solid var(--lime);
+  border-bottom: 1px solid var(--lime);
+  transform: rotate(45deg);
 }
 
-.card span {
-  font-size: 13px;
-  color: #aaa;
+/* Meta Data */
+.author {
+  padding-left: 70px;
 }
 
+.name {
+  color: var(--lime);
+  display: block;
+  font-weight: bold;
+}
+
+.title {
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+/* Active vs Side Card Logic */
+.side-card {
+  /* opacity: 0.4; Faded effect as seen in reference */
+}
+
+/* Navigation Controls */
+.controls {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  transform: rotate(45deg); /* Star/Diamond shape */
+}
+
+.dot.active {
+  background: var(--lime);
+}
 
 
 
@@ -1854,3 +1879,159 @@ html, body{
         /* overflow: hidden; */
     }
 }
+
+/* testinomial slide section responsive */
+
+/* ============================= */
+/* RESPONSIVE DESIGN START */
+/* ============================= */
+
+/* Large Screens (Laptop / Desktop 1400px+) */
+@media (max-width: 1400px) {
+  .testimonial-row {
+    width: 120%;
+  }
+
+  .testimonial-card {
+    flex: 0 0 500px;
+  }
+}
+
+
+/* Tablets (iPad Pro / Air / Mini / Surface Pro etc) */
+@media (max-width: 1024px) {
+
+  .testimonial-row {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 80%;
+  }
+
+  .bubble {
+    padding: 30px;
+  }
+
+  .controls {
+    gap: 30px;
+  }
+}
+
+
+/* Small Tablets & Large Phones (iPhone XR, 12 Pro, Pixel 7 etc) */
+@media (max-width: 768px) {
+
+  .testimonial-viewport {
+    padding: 60px 20px;
+  }
+
+  .testimonial-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+    max-width: 500px;
+  }
+
+  .bubble {
+    padding: 25px;
+    border-radius: 30px;
+  }
+
+  .bubble::after {
+    left: 40px;
+  }
+
+  .author {
+    padding-left: 50px;
+  }
+
+  .controls {
+    margin-top: 40px;
+    gap: 25px;
+  }
+}
+
+
+/* Small Phones (iPhone SE, Galaxy A51/71 etc) */
+@media (max-width: 480px) {
+
+  .testimonial-viewport {
+    padding: 40px 15px;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  .bubble {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .bubble::after {
+    left: 30px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .author {
+    padding-left: 40px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+
+/* Fold Devices (Galaxy Z Fold, Surface Duo, Zenbook Fold etc) */
+@media (max-width: 600px) and (orientation: landscape) {
+
+  .testimonial-row {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonial-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}
+
+
+/* Very Large Screens (4K / Big Desktop) */
+@media (min-width: 1600px) {
+
+  .testimonial-row {
+    width: 110%;
+  }
+
+  .testimonial-card {
+    flex: 0 0 650px;
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN END */
+/* ============================= */
