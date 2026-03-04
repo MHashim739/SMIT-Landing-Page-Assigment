@@ -881,7 +881,87 @@ html, body{
     margin: 5px 0;
 }
 
+/* tetinimials slide section style */
 
+.testimonials {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 27px;
+  background: #0f1117;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+.card1{
+    margin-right: 20%;
+}
+
+.cards {
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.card1 {
+  width: 40%;
+  height: 400px;
+  padding: 40px;
+  border: 1.5px solid #39ff14;
+  border-radius: 24px;
+  color: white;
+  background: transparent;
+  opacity: 0.4;
+}
+.card2 {
+  width: 40%;
+  height: 400px;
+  padding: 40px;
+  clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 44% 100%, 34% 74%, 1% 100%, 0% 43%, 0 0);
+  border: 2px solid #39ff14;
+  /* border: 1.5px solid #39ff14; */
+  border-radius: 24px;
+  clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 44% 100%, 34% 74%, 1% 100%, 0% 43%, 0 0);
+  color: white;
+  background: transparent;
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.card3 {
+    
+  width: 40%;
+  height: 400px;
+  padding: 40px;
+  border: 1.5px solid #39ff14;
+  border-radius: 24px;
+  color: white;
+  /* background: transparent; */
+  /* opacity: 0.4; */
+}
+.card.active {
+  opacity: 1;
+}
+
+/* 🔥 Ye hai bottom special cut shape */
+
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.card h4 {
+  color: #39ff14;
+  margin: 0;
+}
+
+.card span {
+  font-size: 13px;
+  color: #aaa;
+}
 
 
 
