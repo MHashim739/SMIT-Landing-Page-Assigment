@@ -9,6 +9,13 @@
 html, body{
     overflow-x: hidden;
 }
+:root {
+    --lime-green: #B9FF66;
+    --charcoal-black: #191A23;
+    --light-gray: #F3F3F3;
+    --white: #FFFFFF;
+    --dark-input: #292A32;
+  }
 /* navbar style */
 .nav-bar-container{
     display: flex;
@@ -988,6 +995,226 @@ html, body{
 .dot.active {
   background: var(--lime);
 }
+
+/* head & paragraph 1 sec 5 */
+.head5-para {
+    display: flex;
+    flex-direction: column; /* Stack by default for small screens */
+    gap: 15px;
+    margin: 50px 10%; /* Use percentage for responsive side margins */
+    flex-wrap: wrap;
+}
+
+/* Heading */
+.head5-para > h5 {
+    display: inline-block;
+} 
+.head5-para > h5 >span{
+    background-color: #89ff66;
+    color: #000;
+    display: inline-block;
+    font-size: clamp(24px, 5vw, 40px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+/* Paragraph */
+.head5-para > p {
+    color: #000;
+    font-size: clamp(14px, 2.5vw, 18px); /* Responsive font-size */
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    margin: 5px 0;
+}
+
+
+  /* Contact Section Styles */
+  .contact-section {
+    background-color: var(--light-gray);
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 40px;
+    padding: 60px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-form-container {
+    flex: 1;
+    max-width: 500px;
+    z-index: 2;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .illustration-container{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 38%;
+    width: 150px;
+    height: auto;
+  }
+
+  .radio-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .radio-item input {
+    margin-right: 10px;
+    accent-color: var(--lime-green);
+    transform: scale(1.5);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+
+  .form-group textarea {
+    height: 120px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--charcoal-black);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  
+
+  /* Footer Styles */
+  .footer-container {
+    /* margin-top: 30%; */
+    background-color: var(--charcoal-black);
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 40px;
+    padding: 50px;
+    color: white;
+  }
+
+  .footer-nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .footer-links a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-circle {
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .label-highlight {
+    background: var(--lime-green);
+    color: black;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  .newsletter-card {
+    background: var(--dark-input);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .newsletter-card input {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+  }
+
+  .subscribe-btn {
+    background: var(--lime-green);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2035,3 +2262,266 @@ html, body{
 /* ============================= */
 /* RESPONSIVE DESIGN END */
 /* ============================= */
+
+/* heading1 & paragraph one section5 */
+
+/* Responsive layout for medium and large screens */
+@media screen and (min-width: 768px) {
+    .head5-para {
+        flex-direction: row;
+        display: inline-block; /* Side by side if enough space */
+    }
+}
+@media (max-width: 768px){
+    .head5-para{
+        display: inline-block;
+        flex-direction: column;
+        padding: 0px 0px;
+        /* overflow: hidden; */
+    }
+}
+
+/* contact page responsive */
+
+/* ============================= */
+/* Extra Small Devices (iPhone SE, small phones) */
+/* ============================= */
+@media (max-width: 375px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .contact-form-container {
+    max-width: 100%;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .illustration-container {
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+
+/* ============================= */
+/* Small Devices (iPhone XR, 12 Pro, Pixel 7, Galaxy S20 etc) */
+/* ============================= */
+@media (min-width: 376px) and (max-width: 576px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 25px;
+  }
+
+  .contact-form-container {
+    max-width: 100%;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .illustration-container {
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+
+/* ============================= */
+/* Medium Devices (iPad Mini, iPad Air, Surface Duo, Galaxy A51/71) */
+/* ============================= */
+@media (min-width: 577px) and (max-width: 991px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .contact-form-container {
+    max-width: 100%;
+  }
+
+  .illustration-container {
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 40px;
+    width: 250px;
+  }
+}
+
+
+/* ============================= */
+/* Large Tablets & Fold Devices (iPad Pro, Surface Pro 7, Galaxy Z Fold 5, Asus Zenbook Fold) */
+/* ============================= */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .contact-section {
+    padding: 50px;
+  }
+
+  .illustration-container {
+    margin-left: 20%;
+  }
+}
+
+
+/* ============================= */
+/* Very Large Screens (Nest Hub, Nest Hub Max, Desktop) */
+/* ============================= */
+@media (min-width: 1201px) {
+  .contact-section {
+    padding: 60px;
+  }
+
+  .illustration-container {
+    margin-left: 38%;
+  }
+}
+
+/* footer section responsive */
+
+/* ============================= */
+/* 📱 Mobile Devices (0px – 480px) */
+/* iPhone SE, XR, small Android */
+/* ============================= */
+@media (max-width: 480px) {
+
+  .footer-container {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .footer-nav-row {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .newsletter-card input {
+    width: 100%;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ============================= */
+/* 📱 Large Phones (481px – 767px) */
+/* iPhone 12 Pro, 14 Pro Max, Pixel 7, Galaxy S20 */
+/* ============================= */
+@media (max-width: 767px) {
+
+  .footer-nav-row {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+  }
+
+  .newsletter-card input {
+    width: 100%;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* ============================= */
+/* 📱 Tablets (768px – 1024px) */
+/* iPad Mini, Air, Pro */
+/* Surface Pro 7 */
+/* ============================= */
+@media (max-width: 1024px) {
+
+  .footer-content {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .footer-nav-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .newsletter-card {
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ============================= */
+/* 📱 Fold Devices (Surface Duo, Z Fold 5, Zenbook Fold) */
+/* ============================= */
+@media (max-width: 900px) {
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+  }
+}
+
+
+/* ============================= */
+/* 📺 Large Screens (Nest Hub / Max) */
+/* ============================= */
+@media (min-width: 1280px) {
+
+  .footer-container {
+    max-width: 1200px;
+  }
+
+}
